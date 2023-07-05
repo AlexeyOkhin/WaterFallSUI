@@ -11,6 +11,9 @@
 		0C0C676D2A55A3800061F9DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C676C2A55A3800061F9DF /* ContentView.swift */; };
 		0C0C676F2A55A3820061F9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C676E2A55A3820061F9DF /* Assets.xcassets */; };
 		0C0C67722A55A3820061F9DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C67712A55A3820061F9DF /* Preview Assets.xcassets */; };
+		0C0C677A2A55C3630061F9DF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C67792A55C3630061F9DF /* .gitignore */; };
+		0C0C677D2A55C3B40061F9DF /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */; };
+		0C0C677E2A55C3B40061F9DF /* MainConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		0C0C676C2A55A3800061F9DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C0C676E2A55A3820061F9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C0C67712A55A3820061F9DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C0C67792A55C3630061F9DF /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MainConfig.xcconfig; sourceTree = "<group>"; };
+		0C0C677F2A55CBD40061F9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,9 @@
 		0C0C675E2A55A3800061F9DF = {
 			isa = PBXGroup;
 			children = (
+				0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */,
+				0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */,
+				0C0C67792A55C3630061F9DF /* .gitignore */,
 				0C0C67692A55A3800061F9DF /* WaterFallSUI */,
 				0C0C67682A55A3800061F9DF /* Products */,
 			);
@@ -55,6 +65,7 @@
 				0C0C676C2A55A3800061F9DF /* ContentView.swift */,
 				0C0C676E2A55A3820061F9DF /* Assets.xcassets */,
 				0C0C67702A55A3820061F9DF /* Preview Content */,
+				0C0C677F2A55CBD40061F9DF /* Info.plist */,
 			);
 			path = WaterFallSUI;
 			sourceTree = "<group>";
@@ -125,7 +136,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0C677E2A55C3B40061F9DF /* MainConfig.xcconfig in Resources */,
+				0C0C677D2A55C3B40061F9DF /* DebugConfig.xcconfig in Resources */,
 				0C0C67722A55A3820061F9DF /* Preview Assets.xcassets in Resources */,
+				0C0C677A2A55C3630061F9DF /* .gitignore in Resources */,
 				0C0C676F2A55A3820061F9DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,12 +283,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WaterFallSUI/Preview Content\"";
 				DEVELOPMENT_TEAM = W856DM7S8L;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WaterFallSUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,12 +314,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WaterFallSUI/Preview Content\"";
 				DEVELOPMENT_TEAM = W856DM7S8L;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WaterFallSUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
