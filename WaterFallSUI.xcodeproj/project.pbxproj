@@ -14,6 +14,7 @@
 		0C0C677A2A55C3630061F9DF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C67792A55C3630061F9DF /* .gitignore */; };
 		0C0C677D2A55C3B40061F9DF /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */; };
 		0C0C677E2A55C3B40061F9DF /* MainConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */; };
+		0C2654CB2A55CF4200413CB2 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
 		0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MainConfig.xcconfig; sourceTree = "<group>"; };
 		0C0C677F2A55CBD40061F9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		0C0C67692A55A3800061F9DF /* WaterFallSUI */ = {
 			isa = PBXGroup;
 			children = (
+				0C2654C92A55CF0C00413CB2 /* Services */,
 				0C0C676A2A55A3800061F9DF /* WaterFallSUIApp.swift */,
 				0C0C676C2A55A3800061F9DF /* ContentView.swift */,
 				0C0C676E2A55A3820061F9DF /* Assets.xcassets */,
@@ -76,6 +79,14 @@
 				0C0C67712A55A3820061F9DF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0C2654C92A55CF0C00413CB2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2654CB2A55CF4200413CB2 /* ImageLoaderService.swift in Sources */,
 				0C0C676D2A55A3800061F9DF /* ContentView.swift in Sources */,
 				0C0C676B2A55A3800061F9DF /* WaterFallSUIApp.swift in Sources */,
 			);
