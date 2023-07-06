@@ -10,16 +10,36 @@ import Foundation
 class PictureViewModel: ObservableObject {
     @Published var photoArray: [Picture] = []
 
+    private let accessKey = Bundle.main.infoDictionary?["ImageAccessKey"] as? String
+    private let host = Bundle.main.infoDictionary?["ImageHost"] as? String
+    private let session = URLSession(configuration: .default)
+
     init() {
-        loadData()
+        loadData(page: 1)
     }
 
-    func loadData() {
-        let key = Bundle.main.infoDictionary?["ImageAccessKey"] as? String
-        let url = "https://api.unsplash.com/photos/random/?count=30&client_id=\(key ?? "")"
-        let session = URLSession(configuration: .default)
+    func loadData(page: Int, per_page: Int = 30) {
+        guard
+            let accessKey = accessKey,
+            let host = host
+        else {
+            return
+        }
 
-        session.dataTask(with: URL(string: url)!) { (data, _, error) in
+        var modernHost = host
+        modernHost.removeAll { char in
+            char == "\\"
+        }
+
+        let urlString = modernHost + "photos?page=\(page)&per_page=\(per_page)"
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        var request = URLRequest(url: url)
+        request.addValue("Client-ID " + accessKey, forHTTPHeaderField: "Authorization")
+        request.addValue("v1", forHTTPHeaderField: "Accept-Version")
+
+        session.dataTask(with: request) { (data, _, error) in
             guard let data = data else { return }
             do {
                 let json = try JSONDecoder().decode([Picture].self, from: data)
