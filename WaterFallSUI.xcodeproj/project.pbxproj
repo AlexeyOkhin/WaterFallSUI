@@ -15,6 +15,8 @@
 		0C0C677D2A55C3B40061F9DF /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */; };
 		0C0C677E2A55C3B40061F9DF /* MainConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */; };
 		0C2654CB2A55CF4200413CB2 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */; };
+		0CC301F82A56FF5C00F6C0C7 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC301F72A56FF5C00F6C0C7 /* PictureModel.swift */; };
+		0CC301FA2A56FFCC00F6C0C7 /* PictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC301F92A56FFCC00F6C0C7 /* PictureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MainConfig.xcconfig; sourceTree = "<group>"; };
 		0C0C677F2A55CBD40061F9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		0CC301F72A56FF5C00F6C0C7 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
+		0CC301F92A56FFCC00F6C0C7 /* PictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,7 @@
 			children = (
 				0C2654C92A55CF0C00413CB2 /* Services */,
 				0C0C676A2A55A3800061F9DF /* WaterFallSUIApp.swift */,
-				0C0C676C2A55A3800061F9DF /* ContentView.swift */,
+				0CC301F42A56FEA400F6C0C7 /* MainFlow */,
 				0C0C676E2A55A3820061F9DF /* Assets.xcassets */,
 				0C0C67702A55A3820061F9DF /* Preview Content */,
 				0C0C677F2A55CBD40061F9DF /* Info.plist */,
@@ -87,6 +91,32 @@
 				0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0CC301F42A56FEA400F6C0C7 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0CC301F62A56FEDF00F6C0C7 /* PictureDescriptionModule */,
+				0CC301F52A56FEB500F6C0C7 /* PictureWaterfallModule */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		0CC301F52A56FEB500F6C0C7 /* PictureWaterfallModule */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C676C2A55A3800061F9DF /* ContentView.swift */,
+				0CC301F72A56FF5C00F6C0C7 /* PictureModel.swift */,
+				0CC301F92A56FFCC00F6C0C7 /* PictureViewModel.swift */,
+			);
+			path = PictureWaterfallModule;
+			sourceTree = "<group>";
+		};
+		0CC301F62A56FEDF00F6C0C7 /* PictureDescriptionModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PictureDescriptionModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C2654CB2A55CF4200413CB2 /* ImageLoaderService.swift in Sources */,
+				0CC301FA2A56FFCC00F6C0C7 /* PictureViewModel.swift in Sources */,
 				0C0C676D2A55A3800061F9DF /* ContentView.swift in Sources */,
+				0CC301F82A56FF5C00F6C0C7 /* PictureModel.swift in Sources */,
 				0C0C676B2A55A3800061F9DF /* WaterFallSUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
