@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Picture: Identifiable, Decodable {
+struct Picture: Identifiable, Decodable, Hashable {
     var id: String
     var alt_description: String
     var urls: [String : String]

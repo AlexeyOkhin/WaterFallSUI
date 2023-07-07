@@ -11,25 +11,46 @@ import SDWebImageSwiftUI
 struct ContentView: View {
     @ObservedObject var randomImages = PictureViewModel()
 
-    private var columns = [
-        GridItem(spacing: 0),
-        GridItem(spacing: 0)
-    ]
+    @State private var selectedItem: Item? = nil
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(randomImages.photoArray, id: \.id) { photo in
-                    WebImage(url: URL(string: photo.urls["thumb"] ?? ""))
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: 150)
-                        .cornerRadius(14)
-                        .clipped()
+        NavigationView {
+            ScrollView {
+                HStack(spacing: 16) {
+                    VStack {
+                        ForEach(Array(randomImages.photoArray.enumerated()), id: \.element.id) { offset, photo in
+
+                            NavigationLink(destination: DetailsView(item: Item(stringUrl: photo.urls["full"] ?? ""))) {
+                                WebImage(url: URL(string: photo.urls["thumb"] ?? ""))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                                    .cornerRadius(10)
+                            }
+                        }
+                    }
+
+                    VStack {
+                        ForEach(Array(randomImages.photoArray.shuffled().enumerated()), id: \.element.id) { offset, photo in
+                            WebImage(url: URL(string: photo.urls["thumb"] ?? ""))
+                                .resizable()
+                                .scaledToFit()
+                                .aspectRatio(contentMode: .fill)
+                                .clipped()
+                                .cornerRadius(10)
+
+                        }
+                    }
                 }.padding()
-            }.navigationTitle("Pictures")
+            }
+            .navigationTitle("PhotoLibrary")
         }
     }
+}
+
+struct Item {
+    let stringUrl: String
 }
 
 struct ContentView_Previews: PreviewProvider {
