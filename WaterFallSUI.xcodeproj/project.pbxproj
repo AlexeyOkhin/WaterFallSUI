@@ -8,33 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		0C0C676B2A55A3800061F9DF /* WaterFallSUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C676A2A55A3800061F9DF /* WaterFallSUIApp.swift */; };
-		0C0C676D2A55A3800061F9DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C676C2A55A3800061F9DF /* ContentView.swift */; };
 		0C0C676F2A55A3820061F9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C676E2A55A3820061F9DF /* Assets.xcassets */; };
 		0C0C67722A55A3820061F9DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C67712A55A3820061F9DF /* Preview Assets.xcassets */; };
 		0C0C677A2A55C3630061F9DF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C67792A55C3630061F9DF /* .gitignore */; };
 		0C0C677D2A55C3B40061F9DF /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */; };
 		0C0C677E2A55C3B40061F9DF /* MainConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */; };
-		0C2654CB2A55CF4200413CB2 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */; };
-		0CC301F82A56FF5C00F6C0C7 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC301F72A56FF5C00F6C0C7 /* PictureModel.swift */; };
-		0CC301FA2A56FFCC00F6C0C7 /* PictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC301F92A56FFCC00F6C0C7 /* PictureViewModel.swift */; };
+		0C2654CB2A55CF4200413CB2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2654CA2A55CF4200413CB2 /* ApiService.swift */; };
+		0CC301F82A56FF5C00F6C0C7 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC301F72A56FF5C00F6C0C7 /* PhotoModel.swift */; };
 		0CC301FD2A570B2D00F6C0C7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0CC301FC2A570B2D00F6C0C7 /* SDWebImageSwiftUI */; };
 		0CC301FF2A5734C900F6C0C7 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC301FE2A5734C900F6C0C7 /* DetailsView.swift */; };
+		0CC302052A598A5100F6C0C7 /* LoadPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC302042A598A5100F6C0C7 /* LoadPhotoViewModel.swift */; };
+		0CC302092A59947B00F6C0C7 /* PhotoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC302082A59947B00F6C0C7 /* PhotoLibraryView.swift */; };
+		0CC3020B2A59959A00F6C0C7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */; };
+		0CC3020D2A5995C400F6C0C7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */; };
+		0CC3020F2A599A2300F6C0C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3020E2A599A2300F6C0C7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C0C67672A55A3800061F9DF /* WaterFallSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterFallSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C0C676A2A55A3800061F9DF /* WaterFallSUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallSUIApp.swift; sourceTree = "<group>"; };
-		0C0C676C2A55A3800061F9DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C0C676E2A55A3820061F9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C0C67712A55A3820061F9DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C0C67792A55C3630061F9DF /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0C0C677B2A55C3B40061F9DF /* DebugConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
 		0C0C677C2A55C3B40061F9DF /* MainConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MainConfig.xcconfig; sourceTree = "<group>"; };
 		0C0C677F2A55CBD40061F9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
-		0CC301F72A56FF5C00F6C0C7 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
-		0CC301F92A56FFCC00F6C0C7 /* PictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewModel.swift; sourceTree = "<group>"; };
+		0C2654CA2A55CF4200413CB2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		0CC301F72A56FF5C00F6C0C7 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		0CC301FE2A5734C900F6C0C7 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		0CC302042A598A5100F6C0C7 /* LoadPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPhotoViewModel.swift; sourceTree = "<group>"; };
+		0CC302082A59947B00F6C0C7 /* PhotoLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryView.swift; sourceTree = "<group>"; };
+		0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0CC3020E2A599A2300F6C0C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +77,8 @@
 		0C0C67692A55A3800061F9DF /* WaterFallSUI */ = {
 			isa = PBXGroup;
 			children = (
-				0C2654C92A55CF0C00413CB2 /* Services */,
 				0C0C676A2A55A3800061F9DF /* WaterFallSUIApp.swift */,
+				0C2654C92A55CF0C00413CB2 /* Services */,
 				0CC301F42A56FEA400F6C0C7 /* MainFlow */,
 				0C0C676E2A55A3820061F9DF /* Assets.xcassets */,
 				0C0C67702A55A3820061F9DF /* Preview Content */,
@@ -92,7 +98,7 @@
 		0C2654C92A55CF0C00413CB2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0C2654CA2A55CF4200413CB2 /* ImageLoaderService.swift */,
+				0C2654CA2A55CF4200413CB2 /* ApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -109,9 +115,9 @@
 		0CC301F52A56FEB500F6C0C7 /* PictureWaterfallModule */ = {
 			isa = PBXGroup;
 			children = (
-				0C0C676C2A55A3800061F9DF /* ContentView.swift */,
-				0CC301F72A56FF5C00F6C0C7 /* PictureModel.swift */,
-				0CC301F92A56FFCC00F6C0C7 /* PictureViewModel.swift */,
+				0CC302072A598C9400F6C0C7 /* Views */,
+				0CC302062A598AE000F6C0C7 /* Models */,
+				0CC302032A598A1800F6C0C7 /* ViewModel */,
 			);
 			path = PictureWaterfallModule;
 			sourceTree = "<group>";
@@ -122,6 +128,33 @@
 				0CC301FE2A5734C900F6C0C7 /* DetailsView.swift */,
 			);
 			path = PictureDetailsModule;
+			sourceTree = "<group>";
+		};
+		0CC302032A598A1800F6C0C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CC302042A598A5100F6C0C7 /* LoadPhotoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0CC302062A598AE000F6C0C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0CC301F72A56FF5C00F6C0C7 /* PhotoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0CC302072A598C9400F6C0C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CC302082A59947B00F6C0C7 /* PhotoLibraryView.swift */,
+				0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */,
+				0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */,
+				0CC3020E2A599A2300F6C0C7 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2654CB2A55CF4200413CB2 /* ImageLoaderService.swift in Sources */,
-				0CC301FA2A56FFCC00F6C0C7 /* PictureViewModel.swift in Sources */,
-				0C0C676D2A55A3800061F9DF /* ContentView.swift in Sources */,
-				0CC301F82A56FF5C00F6C0C7 /* PictureModel.swift in Sources */,
+				0C2654CB2A55CF4200413CB2 /* ApiService.swift in Sources */,
+				0CC302052A598A5100F6C0C7 /* LoadPhotoViewModel.swift in Sources */,
+				0CC3020B2A59959A00F6C0C7 /* LoadingView.swift in Sources */,
+				0CC301F82A56FF5C00F6C0C7 /* PhotoModel.swift in Sources */,
 				0C0C676B2A55A3800061F9DF /* WaterFallSUIApp.swift in Sources */,
+				0CC302092A59947B00F6C0C7 /* PhotoLibraryView.swift in Sources */,
 				0CC301FF2A5734C900F6C0C7 /* DetailsView.swift in Sources */,
+				0CC3020F2A599A2300F6C0C7 /* HomeView.swift in Sources */,
+				0CC3020D2A5995C400F6C0C7 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
