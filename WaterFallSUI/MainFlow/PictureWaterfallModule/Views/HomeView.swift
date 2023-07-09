@@ -27,7 +27,7 @@ struct HomeView: View {
                             }
                         }
                         .padding([.horizontal], 16)
-                        ProgressView()
+                        ProgressView("Loading new page...")
                     }
 
                 case .failed(let error):

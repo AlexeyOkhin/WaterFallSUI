@@ -10,6 +10,7 @@ import Combine
 
 class ImageLoader: ObservableObject {
     @Published var image: UIImage?
+    var isLoading = true
     var urlString: String?
     var imageCache = ImageCache.getImageCache()
 
@@ -20,6 +21,7 @@ class ImageLoader: ObservableObject {
 
     func loadImage() {
         if loadImageFromCache() {
+            self.isLoading = false
             return
         }
 
@@ -65,6 +67,7 @@ class ImageLoader: ObservableObject {
 
             self.imageCache.set(forKey: self.urlString!, image: loadedImage)
             self.image = loadedImage
+            self.isLoading = false
         }
     }
 }

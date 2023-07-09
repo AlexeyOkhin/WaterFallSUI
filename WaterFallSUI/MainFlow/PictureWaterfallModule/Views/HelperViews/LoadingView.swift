@@ -11,7 +11,7 @@ struct LoadingView: View {
     var body: some View {
         VStack {
             Spacer()
-            ProgressView()
+            ProgressView("Loading...")
             Spacer()
         }
     }

@@ -17,10 +17,17 @@ struct AsyncLoadImage: View {
 
     var body: some View {
 
-        Image(uiImage: imageLoader.image ?? UIImage() )
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        Group {
+            if imageLoader.isLoading {
+                ProgressView() 
+            } else {
+                Image(uiImage: imageLoader.image ?? UIImage())
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+        }
     }
+
 }
 
 struct AsyncImage_Previews: PreviewProvider {
