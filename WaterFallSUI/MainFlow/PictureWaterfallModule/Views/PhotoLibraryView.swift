@@ -24,15 +24,11 @@ struct PhotoLibraryView: View {
         var list1: [PhotoModel] = []
         var list2: [PhotoModel] = []
 
-        photos.forEach { photo in
-            let index = photos.firstIndex {$0.id == photo.id }
-
-            if let index = index {
-                if index % 2 == 0  {
-                    list1.append(photo)
-                } else {
-                    list2.append(photo)
-                }
+        photos.enumerated().forEach { index, photo in
+            if index % 2 == 0  {
+                list1.append(photo)
+            } else {
+                list2.append(photo)
             }
         }
         result.append(list1)
@@ -47,25 +43,13 @@ struct PhotoLibraryView: View {
 
             LazyVStack(spacing: 8) {
                 ForEach(splitArray[0]) { photo in
-                    NavigationLink(destination: DetailsView(item: photo)) {
-                        WebImage(url: URL(string: photo.urls.thumb))
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .onAppear(perform: { onAppearClosure(photo) })
-                    }
+                    showPicture(photo)
                 }
             }
 
             LazyVStack(spacing: 8) {
                 ForEach(splitArray[1]) { photo in
-                    NavigationLink(destination: DetailsView(item: photo)) {
-                        WebImage(url: URL(string: photo.urls.thumb))
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .onAppear(perform: { onAppearClosure(photo) })
-                    }
+                    showPicture(photo)
                 }
             }
         }
@@ -76,5 +60,30 @@ struct PhotoLibraryView: View {
             return
         }
         onTileCallback(photo)
+    }
+
+    private func showPicture(_ photo: PhotoModel) -> some View {
+        return NavigationLink(destination: DetailsView(item: photo)) {
+            WebImage(url: URL(string: photo.urls.thumb))
+                .resizable()
+                .placeholder(Image(systemName: "photo"))
+                .placeholder {
+                    Rectangle().foregroundColor(.gray)
+                }
+                .renderingMode(.original)
+                .scaledToFit()
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .onAppear(perform: { onAppearClosure(photo) })
+        }.buttonStyle(BouncyStyle())
+    }
+}
+
+private struct BouncyStyle: ButtonStyle {
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(maxWidth: .infinity)
+            .scaleEffect(configuration.isPressed ? 0.8 : 1)
+            .animation(.easeOut(duration: 0.3), value: configuration.isPressed)
     }
 }

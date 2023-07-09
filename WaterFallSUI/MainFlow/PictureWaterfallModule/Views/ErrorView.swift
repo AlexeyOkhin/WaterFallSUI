@@ -8,19 +8,30 @@
 import SwiftUI
 
 struct ErrorView: View {
+
+    @State private var showAlert = true
+    
     let error: String
+    let action: (()->Void)?
 
     var body: some View {
-        VStack {
-            Spacer()
-            Text(error)
-            Spacer()
-        }
+        VStack {}
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Внимание ошибка!!!"),
+                    message: Text(error),
+                    dismissButton: .default(Text("Повторить"), action: {
+                        action?()
+                    })
+                )
+            }
     }
 }
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(error: "Error")
+        ErrorView(error: "Erorr test") {
+            print("error test")
+        }
     }
 }

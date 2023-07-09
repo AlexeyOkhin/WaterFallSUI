@@ -18,24 +18,26 @@ struct HomeView: View {
                 case .loading:
                     LoadingView()
                 case .loaded(let photos):
-
                     ScrollView {
                         PhotoLibraryView(photos) { photo in
 
-                                guard let lastPhoto = photos.last else { return }
-                                if lastPhoto.id == photo.id {
-                                    photoViewModel.loadPhotos()
-                                }
+                            guard let lastPhoto = photos.last else { return }
+                            if lastPhoto.id == photo.id {
+                                photoViewModel.loadPhotos()
+                            }
                         }
                         .padding([.horizontal], 16)
+                        ProgressView()
                     }
 
                 case .failed(let error):
-                    ErrorView(error: "\(error.localizedDescription)")
+                    ErrorView(error: "\(error.localizedDescription)"){
+                        photoViewModel.reloadPhoto()
+                    }
                 }
+
             }.navigationTitle("Photo Library")
         }
-
     }
 }
 

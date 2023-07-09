@@ -17,12 +17,11 @@ class PhotoViewModel : ObservableObject {
         case failed(Error)
     }
 
-
     @Published private(set) var state = State.loading
-    private var currentPage = 1
+
+    private var currentPage = 3
     private var cancellable = Set<AnyCancellable>()
     private var allPhotos: [PhotoModel] = []
-
     private let accessKey = Bundle.main.infoDictionary?["ImageAccessKey"] as? String
     private let host = Bundle.main.infoDictionary?["ImageHost"] as? String
 
@@ -30,8 +29,12 @@ class PhotoViewModel : ObservableObject {
         loadPhotos()
     }
 
-    func loadPhotos() {
+    func reloadPhoto() {
+        state = .loading
+        loadPhotos()
+    }
 
+    func loadPhotos() {
         guard
             let accessKey = accessKey,
             let host = host
@@ -44,7 +47,7 @@ class PhotoViewModel : ObservableObject {
             char == "\\"
         }
 
-        let urlString = modernHost + "photos?page=\(currentPage)&per_page=20"
+        let urlString = modernHost + "photos?page=\(currentPage)&per_page=10"
 
         guard
             let url = URL(string: urlString)
@@ -60,7 +63,7 @@ class PhotoViewModel : ObservableObject {
         let photosService = APIService<[PhotoModel]>(request)
 
         photosService.getData()
-//            .delay(for: 0.8, scheduler: RunLoop.main)
+            .delay(for: 0.8, scheduler: RunLoop.main) // задержка для того чтоб увидеть постраничную загрузку
             .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
