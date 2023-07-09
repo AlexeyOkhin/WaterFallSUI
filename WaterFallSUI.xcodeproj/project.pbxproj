@@ -22,6 +22,9 @@
 		0CC3020B2A59959A00F6C0C7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */; };
 		0CC3020D2A5995C400F6C0C7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */; };
 		0CC3020F2A599A2300F6C0C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3020E2A599A2300F6C0C7 /* HomeView.swift */; };
+		0CC302112A5AD5A900F6C0C7 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC302102A5AD5A900F6C0C7 /* ImageLoaderService.swift */; };
+		0CC302142A5AD7B000F6C0C7 /* AsynImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC302132A5AD7B000F6C0C7 /* AsynImage.swift */; };
+		0CC302172A5ADE8200F6C0C7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC302162A5ADE8200F6C0C7 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		0CC3020E2A599A2300F6C0C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0CC302102A5AD5A900F6C0C7 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		0CC302132A5AD7B000F6C0C7 /* AsynImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynImage.swift; sourceTree = "<group>"; };
+		0CC302162A5ADE8200F6C0C7 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0C0C676A2A55A3800061F9DF /* WaterFallSUIApp.swift */,
+				0CC302152A5ADE6600F6C0C7 /* Common */,
 				0C2654C92A55CF0C00413CB2 /* Services */,
 				0CC301F42A56FEA400F6C0C7 /* MainFlow */,
 				0C0C676E2A55A3820061F9DF /* Assets.xcassets */,
@@ -99,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0C2654CA2A55CF4200413CB2 /* ApiService.swift */,
+				0CC302102A5AD5A900F6C0C7 /* ImageLoaderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -149,12 +157,29 @@
 		0CC302072A598C9400F6C0C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0CC302122A5AD79400F6C0C7 /* HelperViews */,
 				0CC302082A59947B00F6C0C7 /* PhotoLibraryView.swift */,
-				0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */,
-				0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */,
 				0CC3020E2A599A2300F6C0C7 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0CC302122A5AD79400F6C0C7 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				0CC3020A2A59959A00F6C0C7 /* LoadingView.swift */,
+				0CC3020C2A5995C400F6C0C7 /* ErrorView.swift */,
+				0CC302132A5AD7B000F6C0C7 /* AsynImage.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		0CC302152A5ADE6600F6C0C7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0CC302162A5ADE8200F6C0C7 /* ImageCache.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +266,9 @@
 				0CC3020B2A59959A00F6C0C7 /* LoadingView.swift in Sources */,
 				0CC301F82A56FF5C00F6C0C7 /* PhotoModel.swift in Sources */,
 				0C0C676B2A55A3800061F9DF /* WaterFallSUIApp.swift in Sources */,
+				0CC302142A5AD7B000F6C0C7 /* AsynImage.swift in Sources */,
+				0CC302172A5ADE8200F6C0C7 /* ImageCache.swift in Sources */,
+				0CC302112A5AD5A900F6C0C7 /* ImageLoaderService.swift in Sources */,
 				0CC302092A59947B00F6C0C7 /* PhotoLibraryView.swift in Sources */,
 				0CC301FF2A5734C900F6C0C7 /* DetailsView.swift in Sources */,
 				0CC3020F2A599A2300F6C0C7 /* HomeView.swift in Sources */,

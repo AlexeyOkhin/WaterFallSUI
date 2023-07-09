@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+//import SDWebImageSwiftUI
 
 struct DetailsView: View {
 
@@ -29,10 +29,11 @@ struct DetailsView: View {
     // MARK: - Content
 
     var body: some View {
-        WebImage(url: URL(string: item.urls.full))
-            .placeholder(content: {ProgressView()})
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        AsyncLoadImage(withURL: item.urls.full)
+//        WebImage(url: URL(string: item.urls.full))
+//            .placeholder(content: {ProgressView()})
+//            .resizable()
+//            .aspectRatio(contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding()
             .shadow(color: .black.opacity(0.2), radius: 12, x:2, y: 2)

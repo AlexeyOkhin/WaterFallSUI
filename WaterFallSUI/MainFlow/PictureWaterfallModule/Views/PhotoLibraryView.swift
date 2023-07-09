@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+//import SDWebImageSwiftUI
 
 struct PhotoLibraryView: View {
 
@@ -64,14 +64,15 @@ struct PhotoLibraryView: View {
 
     private func showPicture(_ photo: PhotoModel) -> some View {
         return NavigationLink(destination: DetailsView(item: photo)) {
-            WebImage(url: URL(string: photo.urls.thumb))
-                .resizable()
-                .placeholder(Image(systemName: "photo"))
-                .placeholder {
-                    Rectangle().foregroundColor(.gray)
-                }
-                .renderingMode(.original)
-                .scaledToFit()
+            AsyncLoadImage(withURL: photo.urls.thumb)
+//            WebImage(url: URL(string: photo.urls.thumb))
+//                .resizable()
+//                .placeholder(Image(systemName: "photo"))
+//                .placeholder {
+//                    Rectangle().foregroundColor(.gray)
+//                }
+//                .renderingMode(.original)
+//                .scaledToFit()
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .onAppear(perform: { onAppearClosure(photo) })
         }.buttonStyle(BouncyStyle())
